@@ -39,3 +39,21 @@ params of url
 `app.get('/users/:id', (req, res) => {} )`
  `&nbsp;` is space character in HTML code
   
+## Lesson 8: Express Router
+
+  A lot of things to do at this
+  Reconstructor files and folder
+
+## Lesson 9: Controller(MVC)
+
+  Logic stuff should be with Controller
+  File and folder looking neat now
+
+## Lesson 10: Template layout pug
+
+ `extends` path to file pug
+
+ `block` meaning name here
+
+ The content will be replace after the block block_name
+ If there is no content at the inherite file, the content in the parent still there
