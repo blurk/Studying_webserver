@@ -57,3 +57,10 @@ params of url
 
  The content will be replace after the block block_name
  If there is no content at the inherite file, the content in the parent still there
+
+## Lesson 11: Static Files
+
+  Has `public/` now
+  Users can accses any files here
+  use static path with static file
+  they will start form `public/`

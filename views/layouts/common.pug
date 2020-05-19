@@ -1,11 +1,23 @@
 html 
   head
   link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
-
+  link(rel="stylesheet", href="/styles/custom.css")
   body
-    .container
-      block content
-      block foot
-        footer(class="footer")
-          .container
-            span(class="text-muted") Lorem ipsum dolor sit amet.
+    header
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+          ul.navbar-nav.mr-auto.ml-auto
+              li.nav-item
+                a.navbar-brand(href='/')
+                  img(src='/images/logo.png', width='30', height='30', alt='logo')
+                  |  CodersX  
+              li.nav-item
+                a.nav-link(href='/users') User List
+              li.nav-item
+                a.nav-link(href='/users/create') Create New User    
+    main
+      .container
+        block content
+        
+    footer.page-footer.font-small.blue
+      .footer-copyright.text-center.py-3
+        | &copy; 2020 Copyright:
