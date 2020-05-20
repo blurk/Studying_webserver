@@ -64,3 +64,5 @@ params of url
   Users can accses any files here
   use static path with static file
   they will start form `public/`
+
+## Lesson 12: Server-side validation (Login)
