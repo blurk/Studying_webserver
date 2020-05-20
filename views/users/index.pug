@@ -7,9 +7,14 @@ block content
     input(type="text" name="q" value=q class="form-control ml-1")
     button(type="submit" class="btn btn-primary ml-2") Search
 
-  ul 
+  table.table
+    tr 
+      th Name
+      th Phone 
     each user in users
-      li 
-        span=user.name
-        span &nbsp;
-        a.text-info(href="/users/" + user.id) View
+      tr
+        td=user.name 
+        td=user.phone
+        td
+          a.text-info(href="/users/" + user.id) 
+            | View

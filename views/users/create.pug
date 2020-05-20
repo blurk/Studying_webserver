@@ -2,9 +2,13 @@ extends ../layouts/common
 
 block content
   h1 Create User
-
-  form(action="/users/create", method="post")
-    label(for="") Name
-    input(name="name" type="text" class="form-control")
-
-    button(class="btn btn-primary") Create
+  .container
+    form(action="/users/create", method="post")
+      .row
+        label(for="") Name
+        input(name="name" type="text" class="form-control")
+      .row
+        label(for="") Phone
+        input(name="phone" type="text" class="form-control")  
+      .row   
+        button(class="btn btn-primary") Create
