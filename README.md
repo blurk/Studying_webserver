@@ -95,3 +95,22 @@ This property is useful for exposing request-level information such as the reque
 
 Or simply: save date in request, can use for passing values between middlewares
 
+## Lesson 14: Cookie
+
+1st time: server set cookie to client
+
+after 1st time: client sends cookie back to server and server can read that cookie
+
+middleware to read cookie `npm install --save cookie-parser`
+
+put this in index.js
+
+```javascript
+var cookieParser = require('cookie-parser')
+app.use(cookieParser())
+```
+
+Application:
+
+* For Authentication
+* Save session id

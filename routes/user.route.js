@@ -8,6 +8,12 @@ const validate = require("../validate/user.validate")
 
 router.get('/', controller.index)
 
+router.get('/cookie', (req, res, next) => {
+    res.cookie('user-id', 12345);
+    res.send('Hello');
+    res.render('users/index'); 
+})
+
 router.get('/search', controller.search)
 							
 router.get('/create', controller.create)
