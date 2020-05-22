@@ -15,6 +15,9 @@ html
                 a.nav-link(href='/users/create') Create New User    
     main
       .container
+        if user 
+          h1 Hello &nbsp;
+            strong=user.name
         block content
         
     footer.page-footer.font-small.blue

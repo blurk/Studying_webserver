@@ -131,3 +131,27 @@ app.use('/users', authMiddleware.requireAuth ,userRoute)
 in index.js
 
 * always redirect wrong user to login page
+
+## Lesson 16: md5
+
+```javascript
+const md5 = require('md5');
+let hashedPassword = md5(password);
+```
+
+use md5 for simple encrypt
+
+## Lesson 17 - Signed Cookie
+
+use `res.locals.user = user;` in auth.controller.js so can use user variable in every pug files in view/
+
+```javascript
+//index.js
+app.use(cookieParser('adaadadknsdnasdlandlasd')) 
+//auth.controller.js
+ res.cookie('userId', user.id, {
+        signed: true
+    });
+```
+
+use signedCookies to avoid hacking
