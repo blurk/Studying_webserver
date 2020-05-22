@@ -147,7 +147,7 @@ use `res.locals.user = user;` in auth.controller.js so can use user variable in 
 
 ```javascript
 //index.js
-app.use(cookieParser('adaadadknsdnasdlandlasd')) 
+app.use(cookieParser('adaadadknsdnasdlandlasd'))//pass secret to cookieParser()
 //auth.controller.js
  res.cookie('userId', user.id, {
         signed: true
@@ -155,3 +155,27 @@ app.use(cookieParser('adaadadknsdnasdlandlasd'))
 ```
 
 use signedCookies to avoid hacking
+
+## Lesson 18: Environment Variables
+
+env: development -> staging -> product
+
+```javascript
+//output all env variables
+console.log(process.env)
+
+//add env var in terminal
+SESSION_SECRET=123456 APP_SECRET=adadadadskadk npm start
+
+//in index.js
+app.use(cookieParser(process.env.SESSION_SECRET)))
+
+//use separate file for env vars
+npm isntall --save dotenv
+
+// remember to add .env to .gitignore
+//require dotenv as soon as possible -> just put it on head of index.js
+require('dotenv').config();
+```
+
+note **never commit secret things or db to git**
