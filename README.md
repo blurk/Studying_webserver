@@ -114,3 +114,20 @@ Application:
 
 * For Authentication
 * Save session id
+
+## Lesson 15: Authentication (Login)
+
+* Never save password in readable form
+
+Create separate folder for authentication
+
+use
+
+```javascript
+const authMiddleware = require('./middleware/auth.middleware')
+app.use('/users', authMiddleware.requireAuth ,userRoute)
+```
+
+in index.js
+
+* always redirect wrong user to login page
