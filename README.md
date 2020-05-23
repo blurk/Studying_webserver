@@ -179,3 +179,9 @@ require('dotenv').config();
 ```
 
 note **never commit secret things or db to git**
+
+## Lesson 19: Debug Nodejs App
+
+put this in `package.json` file : `"start": "nodemon --inspect index.js",`
+
+Nodejs icon will show on chrome developer tools
