@@ -615,5 +615,14 @@
       "image": "https://picsum.photos/400/300",
       "description": "vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae"
     }
+  ],
+  "sessions": [
+    {
+      "id": "CNOpOSA92",
+      "cart": {
+        "5a0cbb1a-3c86-4152-9118-157c51369e4f": 3,
+        "b4e787f8-4ca5-40ac-b467-999981e663c0": 1
+      }
+    }
   ]
 }

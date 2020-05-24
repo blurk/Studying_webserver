@@ -8,15 +8,15 @@ block content
     button.btn.btn-primary.ml-2(type="submit") Search
   
   .container-fluid
-    .row.d-flex.flex-row    
+    .row    
       each product in products
-        .col-sm-3
+        .col-sm-12.col-md-3
           .card
               img.card-img-top(src=product.image, alt="product image")    
               .card-body
                 h1.card-title=product.name
                 p.card-text=product.description
-                a.btn.btn-primary(href="#") Add to cart
+                a.btn.btn-primary(href="/cart/add/"+product.id) Add to cart
   
   - var numberOfButtons = 5;
   - var pageNum = current - 2 > 1? current - 2 : 1;

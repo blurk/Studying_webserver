@@ -1,0 +1,19 @@
+extends ../layouts/common
+
+block content
+  h1 Your Cart
+  .container-fluid
+    each product in products
+      .card.mt-2
+        .row
+          .col-md-4.col-sm-12.center
+            img.w-100(src=product.image, alt="preview")
+          .col-md-6.col-sm-12
+            .card-text.p-2
+              h4=product.name
+              p=product.description
+          .col-md-2.col-sm-12.p-2.text-info.text-center
+              h1=cart[product.id]
+
+  .row.d-flex.justify-content-center            
+    button.mt-5.btn.btn-primary(type="submit") Buy            
