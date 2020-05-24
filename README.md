@@ -185,3 +185,22 @@ note **never commit secret things or db to git**
 put this in `package.json` file : `"start": "nodemon --inspect index.js",`
 
 Nodejs icon will show on chrome developer tools
+
+## Lesson 20: Pagination
+
+The concept(I guess):
+  All items are in an array called `arr`
+  Get `x` items in `arr` and put it in `n`th page
+  Use `arr.prototype.slice()` to get items
+  `begin = (n-1) * x`
+  `end = n*x || begin + x`
+  items = arr.slice(begin, end)
+
+For example:
+  Have an array with 10 items
+  Show 3 items per page: x = 3
+  Then at 1st page: n = 1
+  Begin: (1 - 1)*3 = 0
+  End: 1*3 || 0+3 = 3
+  Get items: `arr.slice(0,3) //arr[0], arr[1], arr[2]`
+  

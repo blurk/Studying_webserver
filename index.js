@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const userRoute = require('./routes/user.route')
 const authRoute = require('./routes/auth.route')
 
+const productRoute = require('./routes/product.route')
 const port = 3000
 
 const app = express()
@@ -30,9 +31,10 @@ app.use(express.static('public'));
 app.get('/', (req, res) => res.render('index', //path to file
 	{ name: 'Sinh' } //local var
 ))//render from views folder
-
 app.use('/users', authMiddleware.requireAuth ,userRoute)
 
 app.use('/auth', authRoute)
+
+app.use('/products', authMiddleware.requireAuth ,productRoute)
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))

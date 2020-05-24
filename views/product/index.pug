@@ -1,0 +1,52 @@
+extends ../layouts/common
+
+block content
+  h1 Products
+
+  form.form-group.d-flex.justify-content-end(action="#", method="GET")
+    input.form-control.w-25(type="text" name="name")
+    button.btn.btn-primary.ml-2(type="submit") Search
+  
+  .container-fluid
+    .row.d-flex.flex-row    
+      each product in products
+        .col-sm-3
+          .card
+              img.card-img-top(src=product.image, alt="product image")    
+              .card-body
+                h1.card-title=product.name
+                p.card-text=product.description
+                a.btn.btn-primary(href="#") Add to cart
+  
+  - var numberOfButtons = 5;
+  - var pageNum = current - 2 > 1? current - 2 : 1;
+
+  nav.mt-5(aria-label='Products list page')
+  ul.pagination.justify-content-center
+    if pre == 0
+      li.page-item.disabled
+        a.page-link(href="#") Previous
+    else
+      li.page-item  
+        a.page-link(href="?page="+ pre) Previous
+
+    - for (var index = 0; index < numberOfButtons; index++, pageNum++) {
+      if pageNum == current
+        li.page-item.active
+          a.page-link(href="?page="+ pageNum)=pageNum
+      else   
+        if pageNum > count
+          break   
+        else 
+          li.page-item
+            a.page-link(href="?page="+ pageNum)=pageNum    
+        
+    - }
+
+    if next > count
+      li.page-item.disabled
+        a.page-link(href="#") Next
+    else
+      li.page-item  
+        a.page-link(href="?page="+ next) Next
+        
