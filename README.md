@@ -228,3 +228,13 @@ Multer is a node.js middleware for handling multipart/form-data, which is primar
 * Using cookies
 
 ### lowdash is so awesome
+
+## Lesson 23: CSRF Attack
+
+Now we use token(a kind of signature) to prevent this attack
+
+`npm install --save csurf`
+
+Use `app.use(csurf( { cookie: true} ));` after using `cookie-parser` in `index.js`
+
+`input(type="hidden", name="_csrf", value=csrfToken)` in input form

@@ -623,6 +623,23 @@
         "5a0cbb1a-3c86-4152-9118-157c51369e4f": 3,
         "b4e787f8-4ca5-40ac-b467-999981e663c0": 1
       }
+    },
+    {
+      "id": "uC-xf8ViY"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "UtgC2S-6U",
+      "amount": 200000,
+      "accountId": "123456",
+      "userId": "sOQD-YofC"
+    },
+    {
+      "id": "kguT13YX2",
+      "amount": 500000,
+      "accountId": "123457",
+      "userId": "sOQD-YofC"
     }
   ]
 }
