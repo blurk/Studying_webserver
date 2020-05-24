@@ -1,21 +1,17 @@
 {
   "users": [
     {
-      "name": "a",
-      "phone": "0136471641",
-      "id": "weG_v4Wiw"
-    },
-    {
       "name": "Sinh",
-      "phone": "0364716483",
-      "id": "ci8wnJRGg"
-    },
-    {
-      "name": "sinh",
-      "phone": "0136471641",
-      "id": "kA003VvaM",
+      "phone": "0184718418",
+      "id": "sOQD-YofC",
       "email": "info@coders.tokyo",
       "password": "e10adc3949ba59abbe56e057f20f883e"
+    },
+    {
+      "name": "a",
+      "phone": "a",
+      "id": "7s33z75E4",
+      "avatar": "uploads\\5ebc57ae129bd9341d67e2d4b43c5d34"
     }
   ],
   "products": [

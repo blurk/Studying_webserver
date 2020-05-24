@@ -9,12 +9,15 @@ block content
 
   table.table
     tr 
+      th Avatar
       th Name
       th Phone 
     each user in users
       tr
-        td=user.name 
-        td=user.phone
         td
-          a.text-info.btn.btn-light(href="/users/" + user.id) 
+          img(src=user.avatar, alt=user.name+"'s avatar" width="64")    
+        td=user.name 
+        td=user.phone            
+        td
+          a.btn.btn-info(href="/users/" + user.id) 
             | View

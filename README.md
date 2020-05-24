@@ -203,4 +203,21 @@ For example:
   Begin: (1 - 1)*3 = 0
   End: 1*3 || 0+3 = 3
   Get items: `arr.slice(0,3) //arr[0], arr[1], arr[2]`
-  
+
+## Lesson 21: File Upload
+
+`body-parser` not support for file upload so we will use `npm install --save multer`
+
+HTML `<form>` enctype Attribute: specifies how the form-data should be encoded when submitting it to the server.  
+
+### Note: The enctype attribute can be used only if method="post"
+
+|Value|Description|
+|---|---|
+|application/x-www-form-urlencoded|Default. All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)|
+|multipart/form-data|No characters are encoded. This value is required when you are using forms that have a file upload control|
+|text/plain|Spaces are converted to "+" symbols, but no special characters are encoded|
+
+### Multer
+
+Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
